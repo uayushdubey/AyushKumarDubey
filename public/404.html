@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script>
+      const path = location.pathname.replace(/\/$/, '');
+      const segments = path.split('/').filter(Boolean);
+      const route = segments.slice(2).join('/');
+      const base = '/' + segments.slice(0, 2).join('/');
+      const target = location.origin + base + '/#/' + (route || '');
+      location.replace(target);
+    </script>
+  </head>
+  <body></body>
+</html>
