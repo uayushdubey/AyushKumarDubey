@@ -1,9 +1,7 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-
-const repositoryName = process.env.VITE_REPO_NAME || '<repo-name>';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: `/${repositoryName}/`,
   plugins: [react()],
-});
+  base: '/AyushKumarDubey/',
+})
